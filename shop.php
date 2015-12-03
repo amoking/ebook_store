@@ -43,7 +43,9 @@ if(mysqli_num_rows($r)>0)#If there is at least 1 row.
                  '<td>'.$img.'<br>'.
                  $row['title'].'<br>£'.
 				$row['price'].'<br>'.
-				$row['summary'].'<br>'.#Display the books
+				'<a href="book_details.php?id='.$row['book_id'].
+                    		'">Book Details</a>'.'<br>'.
+				#Display the books
 		'<a href="added.php?id='.$row['book_id'].
 		'">Add To Cart</a></td>';
 	}
